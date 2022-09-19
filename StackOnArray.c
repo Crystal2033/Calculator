@@ -38,24 +38,6 @@ int push(PStack stack, union Data toPush) // 0 - success; others - own errors
 		}
 		else return -1;
 	}
-
-	//else if (stack->topIndex_ptr == stack->data + (stack->stackSize / 2) - 1 && stack->stackSize > 2)
-	//{
-	//	stack->stackSize /= 2;
-	//	tmp = (PData)realloc(stack->data, sizeof(Data) * stack->stackSize);
-	//	if (tmp)
-	//	{
-	//		stack->data = tmp;
-	//		stack->topIndex_ptr = stack->data + stack->stackSize - 1;
-	//		//stack->stackSize /= 2;
-	//	}
-	//	else
-	//	{
-	//		stack->stackSize *= 2;
-	//		return -1;
-	//	}
-
-	//}
 	*(stack->topIndex_ptr) = toPush;
 	stack->topIndex_ptr++;
 	
